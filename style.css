@@ -2,6 +2,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: serif;
+    scrollbar-width: thin;  /* Width of the scrollbar (thin, auto, none) */
+    scrollbar-color: rgb(108, 108, 108) #000000;  
 }
 
 header {
@@ -171,6 +173,22 @@ p {
     width: 90vw;
     height: 40vw;
     border-radius: 10px;
+}
+::-webkit-scrollbar {
+    width: 3px;  /* Width of the entire scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #000000;  /* Background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #737373;  /* Color of the scrollbar thumb on hover */
+    border-radius: 6px;  /* Round corners of the scrollbar thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #737373;  /* Color of the scrollbar thumb on hover */
 }
 
 @keyframes scroll {
