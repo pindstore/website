@@ -86,16 +86,26 @@
                 <div class="white-line"></div>
             </div>
             <div id="carousel">
-                <img src="cimg2.jpeg">
+                <div id="photos">
+                  <div class="carousel-inner">
+                    <div class="carousel-item"><img src="cimg2.jpeg"></div>
+                    <div class="carousel-item"><img src="cimg3.jpg"></div>
+                    <div class="carousel-item"><img src="cimg4.jpg"></div>
+                    <div class="carousel-item"><img src="cimg5.jpg"></div>
+                    <div class="carousel-item"><img src="cimg6.jpg"></div>
+                  </div>
+                </div>
+                <button id="prev-btn">&lt;</button>
+                <button id="next-btn">&gt;</button>
                 <p>
-                    Pind stitches high-quality urban streetwear. Our carefully 
-                    curated collection blends traditional elements with 
-                    contemporary streetwear fashion, ensuring a luxurious 
-                    and stylish experience. Stay tuned and stand out from
-                    the crowd with Pind's unique fusion of tradition and 
-                    urban chic.
+                  Pind stitches high-quality urban streetwear. Our carefully 
+                  curated collection blends traditional elements with 
+                  contemporary streetwear fashion, ensuring a luxurious 
+                  and stylish experience. Stay tuned and stand out from
+                  the crowd with Pind's unique fusion of tradition and 
+                  urban chic.
                 </p>
-            </div>
+              </div>
         </section>
         <section id=sec3>
             <br>
@@ -179,4 +189,42 @@
         </div>
     </footer>
 </body>
+    <script>
+const carousel = document.querySelector('#photos');
+const carouselInner = document.querySelector('.carousel-inner');
+const carouselItems = document.querySelectorAll('.carousel-item');
+let currentIndex = 0;
+
+function updateCarousel() {
+  carouselItems.forEach((item, index) => {
+    if (index === currentIndex) {
+      item.style.transform = 'translateZ(0px) scale(1)';
+      item.style.opacity = '1';
+    } else {
+      item.style.transform = 'translateZ(-200px) scale(0.8)';
+      item.style.opacity = '0';
+    }
+  });
+}
+
+function next() {
+  carouselItems[currentIndex].style.transition = 'transform 1s, opacity 1s';
+  currentIndex = (currentIndex + 1) % carouselItems.length;
+  updateCarousel();
+}
+
+function previous() {
+  carouselItems[currentIndex].style.transition = 'transform 1s, opacity 1s';
+  currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
+  updateCarousel();
+}
+
+document.getElementById('next-btn').addEventListener('click', next);
+document.getElementById('prev-btn').addEventListener('click', previous);
+
+// Initial state
+updateCarousel();
+
+
+</script>
 </html>
