@@ -150,6 +150,73 @@ footer{
 #emails input[type="submit"]:hover {
     background-color: lightgrey;
 }
+#carousel {
+    position: relative;
+    margin: 0 auto;
+    perspective: 1000px; /* Enable 3D space for the carousel */
+  }
+  
+  #photos {
+    width: 40vw;
+    height: 22vw;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .carousel-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .carousel-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: transform 1s;
+  }
+  
+  .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  /* Buttons for navigation */
+  #prev-btn, #next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgb(21,21,21);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+    font-size:x-large;
+  }
+  
+  #prev-btn {
+    left: 10px;
+  }
+  
+  #next-btn {
+    right: 10px;
+  }
+  #carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  p {
+    margin-top: 20px;
+    text-align: center;
+    max-width:40vw;
+  }
+  
 @keyframes scroll {
     0% {
         transform: translateX(0%);
@@ -163,16 +230,26 @@ footer{
         flex-direction: column;
         margin:10px;
     }
-    #carousel img{
-        width:80vw;
-        height: fit-content;    
+    #photos {
+        width: 80vw;
+        height: 44vw;
+        position: relative;
+        overflow: hidden;
     }
     #carousel p{
         font-size:larger;
         margin:30px;
     }
-        #sec1 img{
+    #sec1 img{
         width: 25vw;
         height: 25vw;
     }
+    #prev-btn, #next-btn {
+        top: 30%;
+    }
+    p {
+        max-width:100vw;
+      }
+      
+
 }
