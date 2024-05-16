@@ -20,7 +20,7 @@ header img{
     height: fit-content;
 }
 #sec1 {
-    background-image: url(/images/bg.jpg);
+    background-image: url(bg.jpg);
     background-size: 100vw;
     background-position: center center;
     z-index: 1;
