@@ -1,0 +1,174 @@
+body{
+    margin:0;
+    padding:0;
+    font-family: serif;
+}
+header {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color:darkgray;
+    margin: 0;
+    width: 100vw;
+    height:7vh;
+}
+header p{
+    color:white;
+}
+header img{
+    width:40px;
+    height: fit-content;
+}
+#sec1 {
+    background-image: url(/images/bg.jpg);
+    background-size: 100vw;
+    background-position: center center;
+    z-index: 1;
+    height: 95vh;
+    width: 100vw;
+}
+#sec1 h1{
+    color:white;
+    margin-top: 30vh;
+    font-size:xx-large
+}
+#sec1 img{
+    width: 10vw;
+    height: 10vw;
+}
+#sec2 {
+    width: 100vw;
+    margin-top:-30px;
+    background-color:rgb(21, 21, 21);
+    color:rgb(139, 139, 139);
+    height:70vh;
+}
+#carousel{
+    display: flex;
+    align-items: center;
+    text-align:center;
+    margin: 50px;
+}
+#carousel img{
+    width:40vw;
+    height: fit-content;
+    border-radius: 10px;
+}
+#carousel p{
+    font-size:x-large;
+    margin: 50px;
+}
+
+#sec3{
+    width: 100vw;
+    background-color:rgb(21, 21, 21);
+    color:rgb(139, 139, 139);
+}
+
+.white-line {
+    width: 100px;  /* Adjust width as needed */
+    height: 5px;   /* Adjust height as needed */
+    background-color: rgb(42,42,42);
+    border-radius: 50px;  /* Adjust border radius for desired curve */
+  }
+  
+
+.instagram-section {
+    position: relative;
+    width: 100vw;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px 0;
+}
+
+.scrolling-text {
+    display: inline-block;
+    animation: scroll 20s linear infinite;
+}
+
+.instagram-link {
+    color:rgb(139, 139, 139);
+    font-size: 24px;
+    text-decoration: none;
+    padding: 0 20px;
+}
+
+.instagram-section:hover .scrolling-text {
+    animation-play-state: paused;
+}
+
+.instagram-link:hover {
+    color: white;
+}
+
+footer{
+    background-color:black;
+    width:100vw;
+    height:15vh;
+    color:white;
+
+}
+#textfooter{
+    display:flex;
+    font-size:small;
+    align-items:center;
+    justify-content: center;
+}
+#text1{
+    width:50vw;
+    margin:50px;
+}
+#text2{
+    width:50vw;
+    margin:50px;
+    text-align:right;
+}
+#emails input[type="text"] {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+#emails input[type="text"]::placeholder {
+    color: white;
+}
+
+#emails input[type="submit"] {
+    background-color: white;
+    color: grey;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#emails input[type="submit"]:hover {
+    background-color: lightgrey;
+}
+@keyframes scroll {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+@media (max-width: 768px) {  /* Target screens smaller than 768px */
+    #carousel {
+        flex-direction: column;
+        margin:10px;
+    }
+    #carousel img{
+        width:80vw;
+        height: fit-content;    
+    }
+    #carousel p{
+        font-size:larger;
+        margin:30px;
+    }
+}
