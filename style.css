@@ -51,7 +51,7 @@ header img{
 }
 #carousel img{
     width:40vw;
-    height: fit-content;
+    height:max-content;
     border-radius: 10px;
 }
 #carousel p{
@@ -170,5 +170,9 @@ footer{
     #carousel p{
         font-size:larger;
         margin:30px;
+    }
+        #sec1 img{
+        width: 25vw;
+        height: 25vw;
     }
 }
